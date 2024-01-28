@@ -77,13 +77,25 @@ function updateAssignment(req, res) {
 }
 
 // suppression d'un assignment (DELETE)
+/*
 function deleteAssignment(req, res) {
 
-    Assignment.findByIdAndRemove(req.params.id, (err, assignment) => {
+    //Assignment.findByIdAndRemove(req.params.id, (err, assignment) => {
+        Assignment.findOneAndRemove(req.body.id, (err, assignment) => {
         if (err) {
             res.send(err);
         }
         res.json({message: `${assignment.nom} deleted`});
+    })
+}
+*/
+function deleteAssignment(req, res) {
+    Assignment.findOneAndRemove({ id: req.body.id }, (err, assignment) => {
+        if (err) {
+            res.send(err);
+        } else {
+            res.json({message: `${assignment.nom} deleted`});
+        }
     })
 }
 

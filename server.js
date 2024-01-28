@@ -173,6 +173,7 @@ app.route(prefix + '/assignments')
 .get(assignment.getAssignments)
 .post(assignment.postAssignment)
 .put(assignment.updateAssignment);
+//.delete(assignment.deleteAssignment);
 
 app.route(prefix + '/assignments/:id')
 .get(assignment.getAssignment)
