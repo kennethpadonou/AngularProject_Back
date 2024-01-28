@@ -5,7 +5,14 @@ let bodyParser = require('body-parser');
 let assignment = require('./routes/assignments');
 let matiere = require('./routes/matieres');
 let users = require('./routes/utilisateurs');
+const cors = require('cors');
 
+app.use(cors());
+/*
+app.use(cors({
+  origin: 'https://front-angular-m1-project-acc70a3593d1.herokuapp.com'
+}));
+*/
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);

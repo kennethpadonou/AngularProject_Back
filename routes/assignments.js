@@ -63,24 +63,6 @@ function postAssignment(req, res){
 }
 
 // Update d'un assignment (PUT)
-/*
-function updateAssignment(req, res) {
-    debugger
-    console.log("UPDATE recu assignment : ");
-    console.log(req.body);
-    Assignment.findByIdAndUpdate(req.body._id, req.body, {new: true}, (err, assignment) => {
-        console.log(assignment,"::\n",req.body)
-        if (err) {
-            console.log(err);
-            res.send(err)
-        } else {
-          res.json({message: 'updated'})
-        }
-
-      // console.log('updated ', assignment)
-    });
-}
-*/
 function updateAssignment(req, res) {
     console.log("UPDATE recu assignment : ");
     console.log(req.body);
@@ -97,7 +79,7 @@ function updateAssignment(req, res) {
 // suppression d'un assignment (DELETE)
 function deleteAssignment(req, res) {
 
-    Assignment.findByIdAndRemove(req.params._id, (err, assignment) => {
+    Assignment.findByIdAndRemove(req.params.id, (err, assignment) => {
         if (err) {
             res.send(err);
         }
