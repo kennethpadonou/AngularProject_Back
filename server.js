@@ -182,6 +182,9 @@ app.route(prefix + '/assignments/:id')
 app.route(prefix + '/matieres')
 .get(matiere.getMatieres);
 
+app.route(prefix + '/utilisateurs')
+.get(users.getUsers);
+
 
 app.route(prefix + '/utilisateurs/authenticate')
 .post(users.authenticateUser);
