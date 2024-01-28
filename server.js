@@ -1,4 +1,4 @@
-
+/*
 let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
@@ -89,7 +89,10 @@ app.listen(port, "0.0.0.0");
 console.log('Serveur démarré sur http://localhost:' + port);
 
 module.exports = app;
-/*
+*/
+
+
+
 let express = require('express');
 let app = express();
 let bodyParser = require('body-parser');
@@ -103,7 +106,7 @@ app.use(cors());
 app.use(cors({
   origin: 'https://front-angular-m1-project-acc70a3593d1.herokuapp.com'
 }));
-//
+*/
 let mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //mongoose.set('debug', true);
@@ -189,4 +192,3 @@ app.listen(port, "0.0.0.0");
 console.log('Serveur démarré sur http://localhost:' + port);
 
 module.exports = app;
-*/
